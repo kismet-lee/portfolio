@@ -3,7 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary Meta Tags -->
     <title>Destiny Simmons' Portfolio</title>
+    <meta name="title" content="Destiny Simmons' Portfolio" />
+    <meta name="description" content="Destiny Simmons is a designer and frontend developer based in Osaka, Japan. Take a look at their portfolio and contact them for work!" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://metatags.io/" />
+    <meta property="og:title" content="Destiny Simmons' Portfolio" />
+    <meta property="og:description" content="Destiny Simmons is a designer and frontend developer based in Osaka, Japan. Take a look at their portfolio and contact them for work!" />
+    <meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
+
+<!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://metatags.io/" />
+    <meta property="twitter:title" content="Destiny Simmons' Portfolio" />
+    <meta property="twitter:description" content="Destiny Simmons is a designer and frontend developer based in Osaka, Japan. Take a look at their portfolio and contact them for work!" />
+    <meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
+
+<!-- Meta Tags Generated with https://metatags.io -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
@@ -16,7 +35,14 @@
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
-
+                <li><img src="./assets/theme_light.png"
+                    id="modeToggle"
+                    class="icon color-icon" 
+                    src-light="./assets/theme_light.png"
+                    src-dark="./assets/theme_dark.png"
+                    alt="color theme icon"
+                    />
+                </li>
             </ul>
         </div>
     </nav>
@@ -33,6 +59,14 @@
                 <li><a href="#experience" onclick="toggleMenu()" >Experience</a></li>
                 <li><a href="#projects" onclick="toggleMenu()" >Projects</a></li>
                 <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                <li><img src="./assets/theme_light.png"
+                    id="modeToggle"
+                    class="icon color-icon" 
+                    src-light="./assets/theme_light.png"
+                    src-dark="./assets/theme_dark.png"
+                    alt="color theme icon"
+                    />
+                </li>
             </div>
         </div>
     </nav>
@@ -52,9 +86,19 @@
                 </button>
             </div>
             <div id="socials-container">
-                <img src="./assets/linkedin.png" alt="My Linkedin profile" class="icon" onclick="location.href='https://linkedin.com/in/destiny-simmons-2b010571/'"
+                <img src="./assets/linkedin_light.png" 
+                src-light="./assets/linkedin_light.png"
+                src-dark="./assets/linkedin_dark.png"
+                alt="My Linkedin profile" 
+                class="icon linkedin-icon" 
+                onclick="location.href='https://linkedin.com/in/destiny-simmons-2b010571/'"
                 />
-                <img src="./assets/github.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/kismet-lee/'"
+                <img src="./assets/github_light.png"
+                src-light="./assets/github_light.png"
+                src-dark="./assets/github_dark.png" 
+                alt="My Github profile" 
+                class="icon" 
+                onclick="location.href='https://github.com/kismet-lee/'"
                 />
             </div>
         </div>
@@ -295,9 +339,12 @@
                 <p><a href="mailto:simmons.d1996@gmail.com">Email</a></p>
             </div>
             <div class="contact-info-container">
-                <img src="./assets/linkedin.png"
-                alt="linkedin icon"
-                class="icon contact-icon"
+                <img src="./assets/linkedin_light.png" 
+                src-light="./assets/linkedin_light.png"
+                src-dark="./assets/linkedin_dark.png"
+                alt="My Linkedin profile" 
+                class="icon linkedin-icon" 
+                onclick="location.href='https://linkedin.com/in/destiny-simmons-2b010571/'"
                 />
                 <p><a href="https://www.linkedin.com/in/destiny-simmons-2b010571/">Linkedin</a></p>
             </div>
