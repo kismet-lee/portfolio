@@ -1,431 +1,553 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <!-- Primary Meta Tags -->
     <title>Destiny Simmons' Portfolio</title>
     <meta name="title" content="Destiny Simmons' Portfolio" />
-    <meta name="description" content="Destiny Simmons is a designer and frontend developer based in Osaka, Japan. Take a look at their portfolio and contact them for work!" />
+    <meta
+      name="description"
+      content="Destiny Simmons is a designer and frontend developer based in Osaka, Japan. Take a look at their portfolio and contact them for work!"
+    />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://simmonsportfolio.netlify.app/" />
+    <meta
+      property="og:url"
+      content="https://simmonsportfolio.netlify.app/"
+    />
     <meta property="og:title" content="Destiny Simmons' Portfolio" />
-    <meta property="og:description" content="Destiny Simmons is a designer and frontend developer based in Osaka, Japan. Take a look at their portfolio and contact them for work!" />
-    <meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
+    <meta
+      property="og:description"
+      content="Destiny Simmons is a designer and frontend developer based in Osaka, Japan. Take a look at their portfolio and contact them for work!"
+    />
+    <meta
+      property="og:image"
+      content="https://i.ibb.co/dBC8Yxh/Project-1.webp"
+    />
 
-<!-- Twitter -->
+    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://simmonsportfolio.netlify.app/" />
-    <meta property="twitter:title" content="Destiny Simmons' Portfolio" />
-    <meta property="twitter:description" content="Destiny Simmons is a designer and frontend developer based in Osaka, Japan. Take a look at their portfolio and contact them for work!" />
-    <meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
+    <meta
+      property="twitter:url"
+      content="https://simmonsportfolio.netlify.app/"
+    />
+    <meta
+      property="twitter:title"
+      content="Destiny Simmons' Portfolio"
+    />
+    <meta
+      property="twitter:description"
+      content="Destiny Simmons is a designer and frontend developer based in Osaka, Japan. Take a look at their portfolio and contact them for work!"
+    />
+    <meta
+      property="twitter:image"
+      content="https://i.ibb.co/dBC8Yxh/Project-1.webp"
+    />
 
-<!-- Meta Tags Generated with https://metatags.io -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mediaqueries.css">
-</head>
-<body>
+    <!-- Meta Tags Generated with https://metatags.io -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
     <nav id="desktop-nav">
-        <div class="logo">Destiny Simmons</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><img src="./assets/theme_light.webp"
-                    id="modeToggle"
-                    class="icon color-icon" 
-                    src-light="./assets/theme_light.webp"
-                    src-dark="./assets/theme_dark.webp"
-                    alt="color theme icon"
-                    />
-                </li>
-            </ul>
-        </div>
+      <div class="logo">Destiny Simmons</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <button id="modeToggle" class="btn-toggle">
+              <img
+                src="./assets/theme_light.webp"
+                class="icon color-icon"
+                alt="Color theme change"
+                src-light="./assets/theme_light.webp"
+                src-dark="./assets/theme_dark.webp"
+              />
+            </button>
+          </li>
+        </ul>
+      </div>
     </nav>
     <nav id="hamburger-nav">
-        <div class="logo">Destiny Simmons</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()" >Experience</a></li>
-                <li><a href="#projects" onclick="toggleMenu()" >Projects</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-                <li><img src="./assets/theme_light.webp"
-                    id="modeToggle2"
-                    class="icon color-icon" 
-                    src-light="./assets/theme_light.webp"
-                    src-dark="./assets/theme_dark.webp"
-                    alt="color theme icon"
-                    />
-                </li>
-            </div>
+      <div class="logo">Destiny Simmons</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li>
+            <a href="#experience" onclick="toggleMenu()"
+              >Experience</a
+            >
+          </li>
+          <li>
+            <a href="#projects" onclick="toggleMenu()">Projects</a>
+          </li>
+          <li>
+            <a href="#contact" onclick="toggleMenu()">Contact</a>
+          </li>
+          <li>
+            <img
+              src="./assets/theme_light.webp"
+              id="modeToggle2"
+              class="icon color-icon"
+              src-light="./assets/theme_light.webp"
+              src-dark="./assets/theme_dark.webp"
+              alt="color theme icon"
+            />
+          </li>
+        </div>
+      </div>
     </nav>
     <section id="profile">
-        <div class="section__pic-container">
-            <img src="./assets/profile-pic-3.webp" class="profile-pic" alt="Destiny Simmons'  profile picture"/
-            >
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic-3.webp" class="profile-pic"
+        alt="Destiny Simmons' profile picture"/ >
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Destiny Simmons</h1>
+        <h2 class="section__text__p2">
+          Frontend developer and designer
+        </h2>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/DS_Resume_GD_2023.pdf')"
+          >
+            Download CV
+          </button>
+          <button
+            class="btn btn-color-1"
+            onclick="location.href='./#contact'"
+          >
+            Contact me
+          </button>
         </div>
-        <div class="section__text">
-            <p class="section__text__p1">Hello, I'm</p>
-            <h1 class="title">Destiny Simmons</h1>
-            <p class="section__text__p2">Frontend developer and designer</p>
-            <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('./assets/DS_Resume_GD_2023.pdf')">Download CV</button>
-                <button class="btn btn-color-1" onclick="location.href='./#contact'">
-                    Contact me
-                </button>
-            </div>
-            <div id="socials-container">
-                <img src="./assets/linkedin_light.webp" 
-                src-light="./assets/linkedin_light.webp"
-                src-dark="./assets/linkedin_dark.webp"
-                alt="My Linkedin profile" 
-                class="icon linkedin-icon" 
-                onclick="location.href='https://linkedin.com/in/destiny-simmons-2b010571/'"
-                />
-                <img src="./assets/github_light.webp"
-                src-light="./assets/github_light.webp"
-                src-dark="./assets/github_dark.webp" 
-                alt="My Github profile" 
-                class="icon" 
-                onclick="location.href='https://github.com/kismet-lee/'"
-                />
-            </div>
-        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin_light.webp"
+            src-light="./assets/linkedin_light.webp"
+            src-dark="./assets/linkedin_dark.webp"
+            alt="My Linkedin profile"
+            class="icon linkedin-icon"
+          />
+          <a href="https://linkedin.com/in/destiny-simmons-2b010571/"
+            >Linkedin</a
+          >
 
+          <img
+            src="./assets/github_light.webp"
+            src-light="./assets/github_light.webp"
+            src-dark="./assets/github_dark.webp"
+            alt="My Github profile"
+            class="icon"
+          />
+          <a href="https://github.com/kismet-lee/">Github</a>
+        </div>
+      </div>
     </section>
     <section id="about">
-        <p class="section__text__p1">Get to know more</p>
-        <h1 class="title">About Me</h1>
-        <div class="section-container">
-            <div class="section__pic-container">
-                <img 
-                src="./assets/about-pic-2.webp" 
-                alt="Profile picture" 
-                class="about-pic" />
-            </div>
-            <div class="about-details-container">
-                <div class="about-containers">
-                    <div class="details-container">
-                        <img 
-                        src="./assets/experience_light.webp"
-                        src-light="./assets/experience_light.webp" 
-                        src-dark="./assets/experience_dark.webp" 
-                        alt="experience icon" 
-                        class="icon"
-                        />
-                        <h3>
-                            Experience
-                        </h3>
-                        <p>5+ years <br /> Marketing  and Design</p>
-                    </div>
-                    <div class="details-container">
-                        <img 
-                        src="./assets/education_light.webp"
-                        src-light="./assets/education_light.webp" 
-                        src-dark="./assets/education_dark.webp"  
-                        alt="education icon" 
-                        class="icon"
-                        />
-                        <h3>
-                            Education
-                        </h3>
-                        <p>BFA <br /> Bachelor's of Fine Arts</p>
-                    </div>
-                </div>
-                <div class="text-container">
-                    <p>
-                        Destiny Simmons is a designer and marketing specialist with 5+ years of experience in each field respectively. Right now, they are currently employed as a web designer with <a href="https://www.waste-creative.jp/">Waste Creative Japan</a>. Check out some of Destiny's work before you go!
-                    </p>
-                </div>
-            </div>
+      <p class="section__text__p1">Get to know more</p>
+      <h2 class="title">About Me</h2>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/about-pic-2.webp"
+            alt="Profile picture"
+            class="about-pic"
+          />
         </div>
-        <img src="./assets/arrow_light.webp"
-        src-light="./assets/arrow_light.webp" 
-        src-dark="./assets/arrow_dark.webp" 
-        alt="arrow icon" 
-        class="icon arrow" 
-        onclick="location.href='./#experience'"
-        />
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience_light.webp"
+                src-light="./assets/experience_light.webp"
+                src-dark="./assets/experience_dark.webp"
+                alt="experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>
+                5+ years <br />
+                Marketing and Design
+              </p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education_light.webp"
+                src-light="./assets/education_light.webp"
+                src-dark="./assets/education_dark.webp"
+                alt="education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>
+                BFA <br />
+                Bachelor's of Fine Arts
+              </p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Destiny Simmons is a designer and marketing specialist
+              with 5+ years of experience in each field respectively.
+              Right now, they are currently employed as a web designer
+              with
+              <a href="https://www.waste-creative.jp/"
+                >Waste Creative Japan</a
+              >. Check out some of Destiny's work before you go!
+            </p>
+          </div>
+        </div>
+      </div>
+      <a href="./#experience">
+        <img
+          src="./assets/arrow_light.webp"
+          src-light="./assets/arrow_light.webp"
+          src-dark="./assets/arrow_dark.webp"
+          alt="arrow icon"
+          class="icon arrow"
+        />  
+      </a>
     </section>
     <section id="experience">
-        <p class="section__text__p1">Explore my</p>
-        <h1 class="title">Experience</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
-                <div class="details-containers">
-                    <h2 class="experience-sub-title">Development</h2>
-                    <div class="article-container">
-                        <article>
-                            <img src="./assets/checkmark_light.webp"
-                            src-light="./assets/checkmark_light.webp"
-                            src-dark="./assets/checkmark_dark.webp" 
-                            alt="Experience icon" 
-                            class="icon"
-                            />
-                            <div>
-                                <h3>HTML</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark_light.webp"
-                            src-light="./assets/checkmark_light.webp"
-                            src-dark="./assets/checkmark_dark.webp"  
-                            alt="Experience icon" 
-                            class="icon"
-                            />
-                            <div>
-                                <h3>CSS</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark_light.webp"
-                            src-light="./assets/checkmark_light.webp"
-                            src-dark="./assets/checkmark_dark.webp"  
-                            alt="Experience icon" 
-                            class="icon"
-                            />
-                            <div>
-                                <h3>JAVASCRIPT</h3>
-                                <p>Beginner</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark_light.webp" 
-                            src-light="./assets/checkmark_light.webp"
-                            src-dark="./assets/checkmark_dark.webp" 
-                            alt="Experience icon" 
-                            class="icon"
-                            />
-                            <div>
-                                <h3>TailwindCSS</h3>
-                                <p>Beginner</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark_light.webp"
-                            src-light="./assets/checkmark_light.webp"
-                            src-dark="./assets/checkmark_dark.webp"  
-                            alt="Experience icon" 
-                            class="icon"
-                            />
-                            <div>
-                                <h3>Github</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark_light.webp"
-                            src-light="./assets/checkmark_light.webp"
-                            src-dark="./assets/checkmark_dark.webp"  
-                            alt="Experience icon" 
-                            class="icon"
-                            />
-                            <div>
-                                <h3>Visual Studio Code</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                    </div>
+      <p class="section__text__p1">Explore my</p>
+      <h2 class="title">Experience</h2>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-containers">
+            <h2 class="experience-sub-title">Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark_light.webp"
+                  src-light="./assets/checkmark_light.webp"
+                  src-dark="./assets/checkmark_dark.webp"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Experienced</p>
                 </div>
-                <div class="details-containers">
-                    <h2 class="experience-sub-title">Design</h2>
-                    <div class="article-container">
-                        <article>
-                            <img src="./assets/checkmark_light.webp"
-                            src-light="./assets/checkmark_light.webp"
-                            src-dark="./assets/checkmark_dark.webp"  
-                            alt="Experience icon" 
-                            class="icon"
-                            />
-                            <div>
-                                <h3>Photoshop</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark_light.webp"
-                            src-light="./assets/checkmark_light.webp"
-                            src-dark="./assets/checkmark_dark.webp"  
-                            alt="Experience icon" 
-                            class="icon"
-                            />
-                            <div>
-                                <h3>Illustrator</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark_light.webp"
-                            src-light="./assets/checkmark_light.webp"
-                            src-dark="./assets/checkmark_dark.webp"  
-                            alt="Experience icon" 
-                            class="icon"
-                            />
-                            <div>
-                                <h3>After Effects</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark_light.webp"
-                            src-light="./assets/checkmark_light.webp"
-                            src-dark="./assets/checkmark_dark.webp"  
-                            alt="Experience icon" 
-                            class="icon"
-                            />
-                            <div>
-                                <h3>Adobe Premiere</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark_light.webp"
-                            src-light="./assets/checkmark_light.webp"
-                            src-dark="./assets/checkmark_dark.webp"  
-                            alt="Experience icon" 
-                            class="icon"
-                            />
-                            <div>
-                                <h3>Photography</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark_light.webp"
-                            src-light="./assets/checkmark_light.webp"
-                            src-dark="./assets/checkmark_dark.webp"  
-                            alt="Experience icon" 
-                            class="icon"
-                            />
-                            <div>
-                                <h3>Social Media Marketing</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                    </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark_light.webp"
+                  src-light="./assets/checkmark_light.webp"
+                  src-dark="./assets/checkmark_dark.webp"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Experienced</p>
                 </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark_light.webp"
+                  src-light="./assets/checkmark_light.webp"
+                  src-dark="./assets/checkmark_dark.webp"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JAVASCRIPT</h3>
+                  <p>Beginner</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark_light.webp"
+                  src-light="./assets/checkmark_light.webp"
+                  src-dark="./assets/checkmark_dark.webp"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>TailwindCSS</h3>
+                  <p>Beginner</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark_light.webp"
+                  src-light="./assets/checkmark_light.webp"
+                  src-dark="./assets/checkmark_dark.webp"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Github</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark_light.webp"
+                  src-light="./assets/checkmark_light.webp"
+                  src-dark="./assets/checkmark_dark.webp"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Visual Studio Code</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
             </div>
+          </div>
+          <div class="details-containers">
+            <h2 class="experience-sub-title">Design</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark_light.webp"
+                  src-light="./assets/checkmark_light.webp"
+                  src-dark="./assets/checkmark_dark.webp"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Photoshop</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark_light.webp"
+                  src-light="./assets/checkmark_light.webp"
+                  src-dark="./assets/checkmark_dark.webp"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Illustrator</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark_light.webp"
+                  src-light="./assets/checkmark_light.webp"
+                  src-dark="./assets/checkmark_dark.webp"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>After Effects</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark_light.webp"
+                  src-light="./assets/checkmark_light.webp"
+                  src-dark="./assets/checkmark_dark.webp"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Adobe Premiere</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark_light.webp"
+                  src-light="./assets/checkmark_light.webp"
+                  src-dark="./assets/checkmark_dark.webp"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Photography</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark_light.webp"
+                  src-light="./assets/checkmark_light.webp"
+                  src-dark="./assets/checkmark_dark.webp"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Social Media Marketing</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+            </div>
+          </div>
         </div>
-        <img src="./assets/arrow_light.webp"
-        src-light="./assets/arrow_light.webp" 
-        src-dark="./assets/arrow_dark.webp"  
-        alt="arrow icon" 
-        class="icon arrow" 
-        onclick="location.href='./#projects'"
+      </div>
+      <a href="./#projects">
+        <img
+          src="./assets/arrow_light.webp"
+          src-light="./assets/arrow_light.webp"
+          src-dark="./assets/arrow_dark.webp"
+          alt="arrow icon"
+          class="icon arrow"
         />
+      </a>
     </section>
     <section id="projects">
-        <p class="section__text__p1">Browse my recent
-        </p>
-    <h1 class="title">Projects</h1>
-    <div class="experience-details-container">
+      <p class="section__text__p1">Browse my recent</p>
+      <h2 class="title">Projects</h2>
+      <div class="experience-details-container">
         <div class="about-containers">
-        <div class="details-containers color-containers">
+          <div class="details-containers color-containers">
             <div class="article-container">
-                <img
+              <img
                 src="./assets/Project-1.webp"
                 alt="project 1"
                 class="project-img"
-                />
+              />
             </div>
-            <h2 class="experience-sub-title project-title">Krew App</h2>
+            <h2 class="experience-sub-title project-title">
+              Krew App
+            </h2>
             <div class="btn-container">
-                <button class="btn btn-color-2 project-btn" onclick="location.href='https://kismet-lee.github.io/Krew-App/'">Live Demo</button>
-                <button class="btn btn-color-2 project-btn" onclick="location.href='https://www.figma.com/proto/rSJTkI8dCIToo4T4c7UBa7/Krew-Landing-Page-V2-2022?node-id=36-2&t=LmRnFYDUn3PcUdPd-1'">Wireframes</button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://kismet-lee.github.io/Krew-App/'"
+              >
+                Live Demo
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://www.figma.com/proto/rSJTkI8dCIToo4T4c7UBa7/Krew-Landing-Page-V2-2022?node-id=36-2&t=LmRnFYDUn3PcUdPd-1'"
+              >
+                Wireframes
+              </button>
             </div>
-        </div>
-        <div class="details-containers color-containers">
+          </div>
+          <div class="details-containers color-containers">
             <div class="article-container">
-                <img
+              <img
                 src="./assets/Project-2.webp"
                 alt="project 2"
                 class="project-img"
-                />
+              />
             </div>
-            <h2 class="experience-sub-title project-title">Draft Studios</h2>
+            <h2 class="experience-sub-title project-title">
+              Draft Studios
+            </h2>
             <div class="btn-container">
-                <button class="btn btn-color-2 project-btn" onclick="location.href='https://draftstudios.io/'">Live Demo</button>
-                <button class="btn btn-color-2 project-btn" onclick="location.href='https://www.figma.com/design/ZghCdNKPu192TWh5hrIzZk/Draft-Studios-Website-Wireframes?m=dev&node-id=0-1&t=LmRnFYDUn3PcUdPd-1'">Wireframes</button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://draftstudios.io/'"
+              >
+                Live Demo
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://www.figma.com/design/ZghCdNKPu192TWh5hrIzZk/Draft-Studios-Website-Wireframes?m=dev&node-id=0-1&t=LmRnFYDUn3PcUdPd-1'"
+              >
+                Wireframes
+              </button>
             </div>
-        </div>
-        <div class="details-containers color-containers">
+          </div>
+          <div class="details-containers color-containers">
             <div class="article-container">
-                <img
+              <img
                 src="./assets/Project-3.webp"
                 alt="project 3"
                 class="project-img"
-                />
+              />
             </div>
-            <h2 class="experience-sub-title project-title">Penn Charter</h2>
+            <h2 class="experience-sub-title project-title">
+              Penn Charter
+            </h2>
             <div class="btn-container">
-                <button class="btn btn-color-2 project-btn" onclick="location.href='https://pccollegeprep.com/'">Live Demo</button>
-                <button class="btn btn-color-2 project-btn" onclick="location.href='https://www.figma.com/design/T5EY4T8um2hjOnxWMMnQd3/Penn-Charter-(Copy)?m=dev&node-id=117-1&t=LmRnFYDUn3PcUdPd-1'">Wireframes</button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://pccollegeprep.com/'"
+              >
+                Live Demo
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://www.figma.com/design/T5EY4T8um2hjOnxWMMnQd3/Penn-Charter-(Copy)?m=dev&node-id=117-1&t=LmRnFYDUn3PcUdPd-1'"
+              >
+                Wireframes
+              </button>
             </div>
+          </div>
         </div>
-    </div>
-    </div>
-    <img src="./assets/arrow_light.webp"
-    src-light="./assets/arrow_light.webp" 
-    src-dark="./assets/arrow_dark.webp"  
-        alt="arrow icon" 
-        class="icon arrow" 
-        onclick="location.href='./#contact'"
+      </div>
+      <a href="./#contact">
+        <img
+          src="./assets/arrow_light.webp"
+          src-light="./assets/arrow_light.webp"
+          src-dark="./assets/arrow_dark.webp"
+          alt="arrow icon"
+          class="icon arrow"
         />
+      </a>
     </section>
     <section id="contact">
-        <p class="section__text__p1">Get in touch</p>
-        <h1 class="title">Contact Me</h1>
-        <div class="contact-info-upper-container">
-            <div class="contact-info-container">
-                <img src="./assets/email_light.webp"
-                src-light="./assets/email_light.webp" 
-                src-dark="./assets/email_dark.webp" 
-                alt="email icon"
-                class="icon contact-icon email-icon"
-                />
-                <p><a href="mailto:simmons.d1996@gmail.com">Email</a></p>
-            </div>
-            <div class="contact-info-container">
-                <img src="./assets/linkedin_light.webp" 
-                src-light="./assets/linkedin_light.webp"
-                src-dark="./assets/linkedin_dark.webp"
-                alt="My Linkedin profile" 
-                class="icon linkedin-icon" 
-                onclick="location.href='https://linkedin.com/in/destiny-simmons-2b010571/'"
-                />
-                <p><a href="https://www.linkedin.com/in/destiny-simmons-2b010571/">Linkedin</a></p>
-            </div>
+      <p class="section__text__p1">Get in touch</p>
+      <h2 class="title">Contact Me</h2>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email_light.webp"
+            src-light="./assets/email_light.webp"
+            src-dark="./assets/email_dark.webp"
+            alt="email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:simmons.d1996@gmail.com">Email</a></p>
         </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin_light.webp"
+            src-light="./assets/linkedin_light.webp"
+            src-dark="./assets/linkedin_dark.webp"
+            alt="My Linkedin profile"
+            class="icon linkedin-icon"
+            onclick="location.href='https://linkedin.com/in/destiny-simmons-2b010571/'"
+          />
+          <p>
+            <a
+              href="https://www.linkedin.com/in/destiny-simmons-2b010571/"
+              >Linkedin</a
+            >
+          </p>
+        </div>
+      </div>
     </section>
     <footer>
-        <nav>
+      <nav>
         <div class="nav-links-container">
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-
-            </ul>
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </div>
-    </nav>
-    <p>Copyright &#169; 2024 Destiny Simmons. All rights reserved.</p>
+      </nav>
+      <p>
+        Copyright &#169; 2024 Destiny Simmons. All rights reserved.
+      </p>
     </footer>
-    <script src="script.js">
-    </script>
-    
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
