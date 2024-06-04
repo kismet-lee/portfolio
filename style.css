@@ -235,6 +235,7 @@ section {
 .section__text__p2 {
   font-size: 1.75rem;
   margin-bottom: 1rem;
+  color: var(--secondary-color);
 }
 
 .title {
@@ -344,6 +345,7 @@ section {
   right: -5rem;
   bottom: 2.5rem;
 }
+
 
 .details-containers {
   padding: 1.5rem;
