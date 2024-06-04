@@ -190,7 +190,7 @@ nav a:hover {
 
 section {
   padding-top: 4vh;
-  heigh: 96vh;
+  height: 96vh;
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
@@ -246,6 +246,7 @@ section {
 #socials-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 1rem;
   gap: 1rem;
 }
@@ -258,6 +259,12 @@ section {
 }
 
 /** BUTTONS **/
+
+.btn-toggle {
+  color: none;
+  border: none;
+  background: none;
+}
 
 .btn-container {
   display: flex;
