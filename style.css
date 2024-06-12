@@ -33,6 +33,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 h3 {
@@ -218,6 +219,11 @@ section {
 
 .profile-pic {
   border-radius: 50%;
+  transition: box-shadow 0.3s;
+}
+
+.profile-pic:hover {
+  box-shadow: 0 0 11px var(--secondary-color);
 }
 
 .section__text {
@@ -345,7 +351,6 @@ section {
   right: -5rem;
   bottom: 2.5rem;
 }
-
 
 .details-containers {
   padding: 1.5rem;
