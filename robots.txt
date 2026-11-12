@@ -94,4 +94,4 @@ Allow: /
 # Disallow: /private/
 
 # 5. SITEMAP
-Sitemap: https://simmonsportfolio.netlify.app/
+Sitemap: https://maketraci.work/
