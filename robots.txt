@@ -1,0 +1,97 @@
+# 1. STANDARD & MAJOR SEARCH ENGINES (ALLOW)
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# 2. AI SEARCH & LIVE CITATION BOTS (ALLOW)
+
+# OpenAI (ChatGPT Search & Live Browsing)
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic (Claude Search & Live Browsing)
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# Perplexity (AI Search & Live Browsing)
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# 3. AI MODEL TRAINING CRAWLERS (BLOCK)
+
+# OpenAI Training
+User-agent: GPTBot
+Disallow: /
+
+# Google Gemini / AI Training (Does not block Google Search or AI Overviews)
+User-agent: Google-Extended
+Disallow: /
+
+# Anthropic Training
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+# Apple Intelligence Training (Does not block Applebot Search)
+User-agent: Applebot-Extended
+Disallow: /
+
+# Meta AI Training
+User-agent: meta-externalagent
+Disallow: /
+
+# Common Crawl (Used to train many open-source AI models)
+User-agent: CCBot
+Disallow: /
+
+# ByteDance / TikTok AI Training
+User-agent: Bytespider
+Disallow: /
+
+# Amazon AI Training
+User-agent: Amazonbot
+Disallow: /
+
+# Cohere AI Training
+User-agent: cohere-ai
+Disallow: /
+
+# 4. DEFAULT RULE FOR ALL OTHER BOTS
+
+User-agent: *
+Allow: /
+# Add any private folders you want to hide from all crawlers below:
+# Disallow: /admin/
+# Disallow: /private/
+
+# 5. SITEMAP
+Sitemap: https://simmonsportfolio.netlify.app/
