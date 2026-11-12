@@ -53,6 +53,20 @@ p {
   color: var(--secondary-color-2);
 }
 
+.text-style-1 {
+  color: var(--secondary-color);
+  width: 100%;
+  max-width: 900px;
+}
+
+.project-desc{
+  margin-bottom: 1rem;
+}
+
+.ghost {
+  color: var(--primary-color-3);
+}
+
 /*TRANSITION*/
 
 a,
@@ -161,7 +175,7 @@ nav a:hover {
   list-style: none;
 }
 .menu-links.open {
-  max-height: 300px;
+  max-height: 400px;
 }
 
 .hamburger-icon.open span:first-child {
@@ -191,6 +205,7 @@ nav a:hover {
 
 section {
   padding-top: 4vh;
+  padding-bottom: 4vh;
   height: 96vh;
   margin: 0 10rem;
   box-sizing: border-box;
@@ -283,7 +298,7 @@ section {
   font-weight: 600;
   transition: all 300ms ease;
   padding: 1rem;
-  width: 8rem;
+  width: 10rem;
   border-radius: 2rem;
 }
 
@@ -373,6 +388,43 @@ section {
   margin: auto 0;
 }
 
+/* WORKSHOPS SECTION */
+
+#workshops {
+  position: relative;
+}
+
+.workshop-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.workshop-container > .section__pic-container {
+  max-height: 600px;
+  height:100%;
+  width: 700px;
+  margin: auto 0;
+}
+
+.workshop-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.workshop-pic {
+  border-radius: 2rem;
+  filter: grayscale(100%);
+  width: 100%;
+}
+
 /* EXPERIENCE SECTION */
 
 #experience {
@@ -440,6 +492,7 @@ article .icon {
 #contact {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
   height: 70vh;
 }
@@ -473,6 +526,10 @@ article .icon {
 }
 
 .linkedin-icon {
+  cursor: default;
+}
+
+.github-icon {
   cursor: default;
 }
 

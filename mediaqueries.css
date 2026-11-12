@@ -46,12 +46,27 @@
   .about-containers {
     margin-top: 0;
   }
+
+
+  .workshop-container {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .workshop-container > .section__pic-container {
+    width: 100%;
+
+  }
 }
 
 @media screen and (max-width: 600px) {
   #contact,
   footer {
     height: 40vh;
+  }
+
+  #contact > .section__text__p2 {
+    font-size: 1.2rem;
   }
 
   #profile {
