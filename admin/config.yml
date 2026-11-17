@@ -1,0 +1,23 @@
+backend:
+  name: github
+  repo: kismet-lee/portfolio # Replace with your GitHub repo
+  branch: main # Branch to update (optional; defaults to master)
+
+# Optional: Uncomment this to test locally without pushing to GitHub
+# local_backend: true
+
+media_folder: "assets/blog-images" # Where uploaded files are saved in your repo
+public_folder: "/assets/blog-images"      # Public URL path used in your markdown/frontmatter
+
+collections:
+  - name: "blog"                      # Used in routes, e.g., /admin/collections/blog
+    label: "Blog"                     # Used in the UI
+    folder: "blog"        # Path to the folder where documents are stored
+    create: true                      # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template
+    fields:                           # Fields for each document, usually in frontmatter
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "thumbnail", widget: "image", required: false }
+      - { label: "Summary", name: "description", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
