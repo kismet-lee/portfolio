@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: kismet-lee/portfolio # Replace with your GitHub repo
+  name: git-gateway
   branch: main # Branch to update (optional; defaults to master)
 
 # Optional: Uncomment this to test locally without pushing to GitHub
