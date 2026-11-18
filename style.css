@@ -120,7 +120,7 @@ nav a:hover {
 }
 
 .logo:hover {
-  cursor: default;
+  cursor: pointer;
 }
 
 /*HAMBURGER MENU*/
@@ -549,3 +549,25 @@ footer {
 footer p {
   text-align: center;
 }
+
+/*BLOG PAGE*/
+    /* Basic layout styling for blog cards */
+    .blog-container { 
+      max-width: 800px; 
+      margin: 3rem auto; 
+      padding: 0 1.5rem; 
+    }
+    .post-card { 
+      border-bottom: 1px solid #ddd; 
+      padding: 2rem 0; 
+    }
+    .post-card img { 
+      max-width: 100%; 
+      height: auto; 
+      border-radius: 8px; 
+      margin-bottom: 1rem; 
+    }
+    .post-date { 
+      color: #666; 
+      font-size: 0.9rem; 
+    }
