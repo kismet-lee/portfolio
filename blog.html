@@ -88,7 +88,7 @@
     </nav>
   <header>
     <a href="/">← Back to Home</a>
-    <h1>Blog</h1>
+    <h1>BLOG IN PROGRESS</h1>
   </header>
 
   <main id="blog-list">
@@ -121,7 +121,7 @@
       const container = document.getElementById("blog-list");
       try {
         // Fetch list of files in the /blog folder via GitHub API
-        const res = await fetch(`https://github.com/${USERNAME}/${REPO}/blog`);
+        const res = await fetch(`https://github.com{USERNAME}/${REPO}/contents/blog`);
         const files = await res.json();
 
         // Filter only .md files and sort newest first
