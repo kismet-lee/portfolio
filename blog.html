@@ -121,7 +121,7 @@
       const container = document.getElementById("blog-list");
       try {
         // Fetch list of files in the /blog folder via GitHub API
-        const res = await fetch(`https://github.com{USERNAME}/${REPO}/contents/blog`);
+        const res = await fetch(`https://github.com/${USERNAME}/${REPO}/contents/blog`);
         const files = await res.json();
 
         // Filter only .md files and sort newest first
@@ -134,7 +134,7 @@
           const title = (text.match(/title:\s*["']?(.*?)["']?\n/) || [])[1] || file.name;
           const date = (text.match(/date:\s*["']?(.*?)["']?\n/) || [])[1] || "";
           const desc = (text.match(/description:\s*["']?(.*?)["']?\n/) || [])[1] || "";
-          const image = (text.match(/image:\s*["']?(.*?)["']?\n/) || [])[1] || "";
+          const thumbnail = (text.match(/image:\s*["']?(.*?)["']?\n/) || [])[1] || "";
 
           const slug = file.name.replace(".md", "");
           container.innerHTML += `
