@@ -116,42 +116,51 @@
     const USERNAME = "kismet-lee";
     const REPO = "portfolio"; // e.g., "portfolio"
 
-    async function loadBlogList() {
-      const container = document.getElementById("post-content");
-      try {
-        // Fetch list of files in the /blog folder via GitHub API
-        const res = await fetch(`https://api.github.com/repos/${USERNAME}/${REPO}/contents/blog`);
-        const files = await res.json();
+  async function loadSinglePost() {
+    const container = document.getElementById("post-content");
+    
+    // 1. Grab the ?post=slug from the URL
+    const params = new URLSearchParams(window.location.search);
+    const slug = params.get("post");
 
-        // Filter only .md files and sort newest first
-        const mdFiles = files.filter(f => f.name.endsWith(".md")).reverse();
-        container.innerHTML = "";
-
-        for (const file of mdFiles) {
-          const text = await (await fetch(file.download_url)).text();
-          // Extract frontmatter values (title, date, description, image)
-          const title = (text.match(/title:\s*["']?(.*?)["']?\n/) || [])[1] || file.name;
-          const date = (text.match(/date:\s*["']?(.*?)["']?\n/) || [])[1] || "";
-          const desc = (text.match(/description:\s*["']?(.*?)["']?\n/) || [])[1] || "";
-          const thumbnail = (text.match(/thumbnail:\s*["']?(.*?)["']?\n/) || [])[1] || "";
-
-          const slug = file.name.replace(".md", "");
-          container.innerHTML += `
-            <article class="post-content">
-              ${thumbnail ? `<img src="${thumbnail}" alt="${title}" />` : ""}
-              <h1><a href="/post.html?post=${slug}">${title}</a></h1>
-              <small>${new Date(date).toLocaleDateString()}</small>
-              <p>${desc}</p>
-              <p>${text}</p>
-            </article>
-          `;
-        }
-      } catch (err) {
-        container.innerHTML = "<p>No blog posts found yet.</p>";
-      }
+    if (!slug) {
+      container.innerHTML = "<p>No post specified. <a href='/blog.html'>Return to blog</a>.</p>";
+      return;
     }
 
-    loadBlogList();
+    try {
+      // 2. Fetch only the specific markdown file directly from raw.githubusercontent
+      const res = await fetch(`https://api.github.com/repos/${USERNAME}/${REPO}/contents/blog/${slug}.md`);
+      
+      if (!res.ok) throw new Error("Post not found");
+      const text = await res.text();
+
+      // 3. Extract frontmatter values
+      const title = (text.match(/title:\s*["']?(.*?)["']?\n/) || [])[1] || slug;
+      const date = (text.match(/date:\s*["']?(.*?)["']?\n/) || [])[1] || "";
+      const thumbnail = (text.match(/thumbnail:\s*["']?(.*?)["']?\n/) || [])[1] || "";
+
+      // 4. Strip the frontmatter block (--- ... ---) so it doesn't show in the body
+      const bodyContent = text.replace(/^---[\s\S]*?---\n*/, "");
+
+      // Optional: Update the browser tab title
+      document.title = `${title} | MakeTraci Blog`;
+
+      // 5. Render the single post
+      container.innerHTML = `
+        <article class="post-content">
+          <h2><a href="/post.html?post=${slug}">${title}</a></h2>
+        <small>${new Date(date).toLocaleDateString()}</small>
+        <p>${desc}</p>
+        <p>${text}</p>
+        </article>
+      `;
+    } catch (err) {
+      container.innerHTML = "<p>Sorry, that blog post could not be found.</p>";
+    }
+  }
+
+  loadSinglePost();
   </script>
 </body>
 </html>
