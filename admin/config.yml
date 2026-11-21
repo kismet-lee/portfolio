@@ -20,3 +20,4 @@ collections:
       - { label: "Featured Image", name: "thumbnail", widget: "image", required: false }
       - { label: "Summary", name: "description", widget: "text" }
       - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Tags", name: "tags", widget: "select", multiple: true, required: false, options: ["Updates", "Tutorial", "Opinion"] }

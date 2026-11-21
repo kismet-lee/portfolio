@@ -134,12 +134,11 @@
           const title = (text.match(/title:\s*["']?(.*?)["']?\n/) || [])[1] || file.name;
           const date = (text.match(/date:\s*["']?(.*?)["']?\n/) || [])[1] || "";
           const desc = (text.match(/description:\s*["']?(.*?)["']?\n/) || [])[1] || "";
-          const thumbnail = (text.match(/image:\s*["']?(.*?)["']?\n/) || [])[1] || "";
+          const thumbnail = (text.match(/thumbnail:\s*["']?(.*?)["']?\n/) || [])[1] || "";
 
           const slug = file.name.replace(".md", "");
           container.innerHTML += `
             <article class="post-card">
-              ${image ? `<img src="${image}" alt="${title}" style="max-width:300px;" />` : ""}
               <h2><a href="/post.html?post=${slug}">${title}</a></h2>
               <small>${new Date(date).toLocaleDateString()}</small>
               <p>${desc}</p>
